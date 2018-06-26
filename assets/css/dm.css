@@ -21,8 +21,7 @@ canvas {
 }
 
 @font-face {
-    font-family: "Dash Font";
-    src: url('../fonts/Handel_Gothic_Italic.ttf') format("truetype");
+    font-family: "Arial";
 }
 
 .hudContainer {
