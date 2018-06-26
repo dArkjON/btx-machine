@@ -979,11 +979,8 @@ DashMachine.prototype.net = function (_this) {
         });
         socket.on('tx', function (data) {
             setNetConnect();
-            for (var i = 0; i < data.vout.length; i++)
-                for (var prop in data.vout[i]) {
-                    _this.Objects.AddTX(data.vout[i][prop] / 10000000);
-                    break;
-                }
+            _this.Objects.AddTX(data.valueOut);
+			
         });
     };
 
