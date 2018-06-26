@@ -1,10 +1,10 @@
 {
-  "name": "dash-machine",
+  "name": "btx-machine",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "browserify ./src/dash-machine.js | uglifyjs -c > ./build/dash-machine.js",
-    "build:debug": "browserify ./src/dash-machine.js -o ./build/dash-machine.js"
+    "build": "browserify ./src/btx-machine.js | uglifyjs -c > ./build/btx-machine.js",
+    "build:debug": "browserify ./src/btx-machine.js -o ./build/btx-machine.js"
   },
   "dependencies": {
     "cannon": "^0.6.2",

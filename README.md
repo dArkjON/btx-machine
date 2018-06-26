@@ -1,20 +1,20 @@
-## Dash Machine
+## Bitcore Machine
 
-Live demo: [Dash Machine](https://andyfreer.github.io/dash-machine/index.html)
+Live demo: [BTX Machine](https://darkjon.github.io/btx-machine/index.html)
 
-Dash Blockchain Visualizer using Three.js, Cannon.js and Insight API.
+Bitcore Blockchain Visualizer using Three.js, Cannon.js and Insight API.
 
 ### Build
 
 Clone the repo:
 
 ```
-git clone https://github.com/andyfreer/dash-machine
+git clone https://github.com/dArkjON/btx-machine
 ```
 
 Install npm packages:
 ```
-cd dash-machine && npm install
+cd btx-machine && npm install
 ```
 
 Build:
@@ -28,15 +28,15 @@ Keys: you can press 'q' to manually cycle through quality settings.
 
 ### Goal
 
-Due to the lack of open-source 3D blockchain visualizers I decided to roll one for Dash.. inspired by BitBonkers & BitListen
+Due to the lack of open-source 3D blockchain visualizers we decided to roll one for Bitcore.. inspired by Dash & BitBonkers & BitListen
 
 ### Overview
 
-When the page loads, the DashMachine object in  [/src/dash-machine.js](https://github.com/andyfreer/dash-machine/blob/master/src/dash-machine.js)  is created which runs the visualization in an HTML5 canvas passed into the constructor.
+When the page loads, the BTXMachine object in  [/src/btx-machine.js](https://github.com/dArkjON/btx-machine/blob/master/src/btx-machine.js)  is created which runs the visualization in an HTML5 canvas passed into the constructor.
 
 A benchmark is run for 3 seconds behind a loading screen at start to determine the device FPS (and later tune the graphics and physics settings appropriately), preload all the assets and get the best block and its tx from Insight.
 
-After preload the best block and tx are added to the scene as a starting point and then we listen for new unconfirmed tx and confirmed blocks from a websocket hooked into Insight using socket.io, defaulted to http://insight.dash.org/insight/.
+After preload the best block and tx are added to the scene as a starting point and then we listen for new unconfirmed tx and confirmed blocks from a websocket hooked into Insight using socket.io, defaulted to https://insight.bitcore.cc .
 
 When a new block hash is seen we re-query Insight to get the block height and a cube is added with the height written on each face and to the html HUD including a timer that just increments since the last block was received.
 
